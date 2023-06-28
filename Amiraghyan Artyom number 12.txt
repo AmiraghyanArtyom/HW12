@@ -1,0 +1,138 @@
+class Express:
+    def __init__(self, colour, max_speed):
+        self.__colour = colour
+        self.__max_speed = max_speed
+
+    def get_colour(self):
+        return self.__colour
+
+    def get_max_speed(self):
+        return self.__max_speed
+
+    def Express_info(self):
+        print(f"\nцвет : {self.__colour} \nmax_speed : {self.__max_speed}")
+
+    def fly(self):
+        print(" поезд летит  ....")
+
+
+s = Express("black",500)
+s.Express_info()
+print(s.get_max_speed())
+print(s.get_colour())
+
+class Transport:
+    def __init__(self, colour, year):
+        self.__colour = colour
+        self.__year = year
+
+    def get_colour(self):
+        return self.__colour
+
+    def get_year(self):
+        return self.__year
+
+    def transport_info(self):
+        print(f"\nцвет : {self.__colour} \nгод выпуска : {self.__year}")
+
+    def strike(self):
+        print("удар в дерево ....")
+
+
+s = Transport("black",2023)
+s.transport_info()
+s.strike()
+print(s.get_year())
+print(s.get_colour())
+
+class Train:
+    def __init__(self,engine,body,year):
+        self.__engine = engine
+        self.__body = body
+        self.__year = year
+
+    def get_engine(self):
+        return self.__engine
+
+    def get_body(self):
+        return self.__body
+
+    def get_year(self):
+        return self.__year
+
+    def drive(self):
+        print("train driving.......")
+
+    def info_train(self):
+        print( f"\nTrain engine : {self.__engine} \nTrain body : {self.__body} \nTrain year : {self.__year}")
+
+
+s1 = Train(4800,"private",1960)
+s1.drive()
+s1.info_train()
+print(f"Production of the Train ended in {s1.get_year()}")
+
+class Car:
+    def __init__(self,made,price,year):
+        self.__made = made
+        self.__price = price
+        self.__year = year
+
+    def print_info(self):
+        print(f"made:{self.__made},price:{self.__price},year:{self.__year}")
+
+    def get_made(self):
+        return self.__made
+
+    def get_price(self):
+        return self.__price
+
+    def get_year(self):
+        return self.__year
+
+    def stop(self):
+        print("car stoping")
+
+    def move(self):
+        print("move...")
+
+
+c1 = Car("mersedes",2000,1970)
+c1.stop()
+c1.move()
+print(c1.print_info())
+print(c1.get_year())
+
+zadacha 2
+
+class Rectangle:
+    def __init__(self, length, width):
+        self.__length = length
+        self.__width = width
+
+    def get_length(self):
+        return self.__length
+
+    def set_length(self):
+        self.__length = length
+
+    def get_width(self):
+        return self.__width
+
+    def set_width(self):
+        self.__width = width
+
+    def perimeter(self):
+        return f'периметр прямоугольника: {(self.__width + self.__length) * 2}'
+
+    def square(self):
+        return f"площадь прямоугольника: {self.__width * self.__length}"
+
+    def __str__(self):
+        return f'прямоугольник со сторонами: {self.__width} и {self.__length}'
+
+
+c = Rectangle(8,9)
+print(c)
+print(c.square())
+print(c.perimeter())
